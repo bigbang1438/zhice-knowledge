@@ -1,0 +1,30 @@
+{
+  "name": "zhice-original-fixed-v1",
+  "scope": "Original fictional small fixed retrieval set. Published fixtures, not blind or held-out. Retrieval metrics are not LLM answer accuracy or generalization.",
+  "cases": [
+    {"id":"q01","question":"团队每周开会是在周几几点？","file":"团队协作手册.md","gold":"每周三下午三点"},
+    {"id":"q02","question":"工作被卡住后多久需要通知协调人？","file":"团队协作手册.md","gold":"两个工作小时"},
+    {"id":"q03","question":"跨小组协作在讨论前要做哪些准备？","file":"团队协作手册.md","gold":"指定一名接口人"},
+    {"id":"q04","question":"谁负责定期复核产品手册？","file":"团队协作手册.md","gold":"产品协调人每月首个工作日"},
+    {"id":"q05","question":"测试设备最多能借几天？","file":"团队协作手册.md","gold":"每次借用最多五天"},
+    {"id":"q06","question":"空间里的只读成员能修改任务吗？","file":"产品使用说明.md","gold":"只读成员仅能查看内容"},
+    {"id":"q07","question":"一个项目的自定义标签数量上限是多少？","file":"产品使用说明.md","gold":"十二个自定义标签"},
+    {"id":"q08","question":"上传任务附件有什么大小和数量限制？","file":"产品使用说明.md","gold":"每个任务最多关联六个附件"},
+    {"id":"q09","question":"导出的任务表会包含评论吗？","file":"产品使用说明.md","gold":"不包含任务评论"},
+    {"id":"q10","question":"任务删除了还能恢复多久？","file":"产品使用说明.md","gold":"十四天内恢复"},
+    {"id":"q11","question":"很多人都无法登录时要多久首次回应？","file":"服务处理指南.md","gold":"十五分钟内首次响应"},
+    {"id":"q12","question":"单个任务显示异常属于什么级别？","file":"服务处理指南.md","gold":"单个任务显示异常属于二级问题"},
+    {"id":"q13","question":"服务工单必须填写哪些信息？","file":"服务处理指南.md","gold":"空间编号、发生时间、操作步骤和预期结果"},
+    {"id":"q14","question":"什么情况下可以把工单标记为已解决？","file":"服务处理指南.md","gold":"连续三个工作日未回复提醒"},
+    {"id":"q15","question":"排查问题时可以向用户索要验证码吗？","file":"服务处理指南.md","gold":"不得要求用户提供密码、验证码"},
+    {"id":"q16","question":"正式文档必须写哪些信息？","file":"知识库维护规范.md","gold":"标题、适用范围、负责人和版本号"},
+    {"id":"q17","question":"引用外部网站时要额外记录什么？","file":"知识库维护规范.md","gold":"还要记录访问日期"},
+    {"id":"q18","question":"谁检查知识库的失效链接，多久一次？","file":"知识库维护规范.md","gold":"每两周检查一次失效链接"},
+    {"id":"q19","question":"用户说回答没有依据时要保存哪些东西？","file":"知识库维护规范.md","gold":"原始问题、检索片段和回答"},
+    {"id":"q20","question":"检索配置修改后应该怎样验证？","file":"知识库维护规范.md","gold":"用固定问题集重新计算检索指标"},
+    {"id":"n01","question":"火星探测器的燃料配比是多少？","file":null,"gold":null},
+    {"id":"n02","question":"海豚的声呐频率是多少赫兹？","file":null,"gold":null},
+    {"id":"n03","question":"珠穆朗玛峰岩石的矿物组成是什么？","file":null,"gold":null},
+    {"id":"n04","question":"如何合成紫色有机荧光染料？","file":null,"gold":null}
+  ]
+}
