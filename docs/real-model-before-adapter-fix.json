@@ -1,0 +1,43 @@
+{
+  "scope": "Pre-fix observations retained as failures. Raw internal analysis omitted.",
+  "chat_model": "zhice-qwen3-4b",
+  "embedding_model": "zhice-bge-m3",
+  "cases": [
+    {
+      "id": "r01",
+      "question": "团队例行周会安排在周几几点？",
+      "mode": "rag",
+      "http_status": 201,
+      "elapsed_seconds": 18.61,
+      "observed_issue": "Legacy imported model template mixed analysis into finalcontent; originalresponse not published. Adapterfix followed by newverification required.",
+      "tool_count": 0
+    },
+    {
+      "id": "r02",
+      "question": "一个项目最多设置多少个自定义标签？",
+      "mode": "rag",
+      "http_status": 201,
+      "elapsed_seconds": 15.38,
+      "observed_issue": "Legacy imported model template mixed analysis into finalcontent; originalresponse not published. Adapterfix followed by newverification required.",
+      "tool_count": 0
+    },
+    {
+      "id": "r03",
+      "question": "这些标签的名称可以重复吗？",
+      "mode": "rag",
+      "http_status": 201,
+      "elapsed_seconds": 15.5,
+      "observed_issue": "Legacy imported model template mixed analysis into finalcontent; originalresponse not published. Adapterfix followed by newverification required.",
+      "tool_count": 0
+    },
+    {
+      "id": "a01",
+      "question": "帮我查一下任务删除后还能恢复多久，请先查资料并核对原文。",
+      "mode": "agent",
+      "http_status": 201,
+      "elapsed_seconds": 36.12,
+      "observed_issue": "Legacy imported model template mixed analysis into finalcontent; originalresponse not published. Adapterfix followed by newverification required.",
+      "tool_count": 1
+    }
+  ]
+}
