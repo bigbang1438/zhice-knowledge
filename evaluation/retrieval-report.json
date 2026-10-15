@@ -1,0 +1,4002 @@
+{
+  "format": "zhice-retrieval-compact-v1",
+  "dataset": "zhice-original-fixed-v1",
+  "dataset_sha256": "efc592c695ed47bdc56e2e349ee87a70b84da106c602cc19b262e1d50fb13705",
+  "scope": "Original fictional small fixed retrieval set. Published fixtures, not blind or held-out. Retrieval metrics are not LLM answer accuracy or generalization.",
+  "answerable": 20,
+  "negative": 4,
+  "corpus": {
+    "document_count": 4,
+    "chunk_count": 4,
+    "documents": [
+      {
+        "filename": "产品使用说明.md",
+        "file_sha256": "c2e06591166d45bb77dcdff81c918c920461a4c127a657ae87ee40d2f05c3522",
+        "bytes": 987,
+        "chunk_count": 1
+      },
+      {
+        "filename": "团队协作手册.md",
+        "file_sha256": "d5c3f676441b393151854bce5134f33c26c091b9e21dfeaf31ba32835cab1b10",
+        "bytes": 1054,
+        "chunk_count": 1
+      },
+      {
+        "filename": "服务处理指南.md",
+        "file_sha256": "b94112e52d6f317b1b6269946720753140b44bfc537e763dc507cb870dc2f0da",
+        "bytes": 1048,
+        "chunk_count": 1
+      },
+      {
+        "filename": "知识库维护规范.md",
+        "file_sha256": "c3235e84743e3210f32742f7ca9440a10bd838688f81f3ecdb04e49c884b42fa",
+        "bytes": 1096,
+        "chunk_count": 1
+      }
+    ],
+    "chunks": [
+      {
+        "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+        "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+        "filename": "产品使用说明.md",
+        "page": 1,
+        "lineStart": 1,
+        "lineEnd": 18,
+        "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f"
+      },
+      {
+        "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+        "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+        "filename": "团队协作手册.md",
+        "page": 1,
+        "lineStart": 1,
+        "lineEnd": 18,
+        "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e"
+      },
+      {
+        "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+        "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+        "filename": "服务处理指南.md",
+        "page": 1,
+        "lineStart": 1,
+        "lineEnd": 18,
+        "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4"
+      },
+      {
+        "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+        "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+        "filename": "知识库维护规范.md",
+        "page": 1,
+        "lineStart": 1,
+        "lineEnd": 18,
+        "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c"
+      }
+    ]
+  },
+  "modes": {
+    "bm25": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "mrr_at_5": 1.0,
+      "negative_no_result": 0,
+      "negative_total": 4,
+      "cases": [
+        {
+          "id": "q01",
+          "question": "团队每周开会是在周几几点？",
+          "gold_file": "团队协作手册.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.079,
+          "sources": [
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 10.312942443650169,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": true
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 1.401228836268415,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 1.1188707380723333,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.7234487839521679,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q02",
+          "question": "工作被卡住后多久需要通知协调人？",
+          "gold_file": "团队协作手册.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.015,
+          "sources": [
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 9.375348743845093,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": true
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 7.862923462272467,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 4.449632577823722,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 3.886796939426869,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q03",
+          "question": "跨小组协作在讨论前要做哪些准备？",
+          "gold_file": "团队协作手册.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.047,
+          "sources": [
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 14.647464380994668,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": true
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 3.8530003949762146,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 1.5068042343245724,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.7025680873969701,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q04",
+          "question": "谁负责定期复核产品手册？",
+          "gold_file": "团队协作手册.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.047,
+          "sources": [
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 9.365226291604827,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": true
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 7.311686949487714,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 1.1274548221569036,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.6042370225144232,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q05",
+          "question": "测试设备最多能借几天？",
+          "gold_file": "团队协作手册.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.031,
+          "sources": [
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 16.033684842791697,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": true
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 4.962222714964006,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.844967250374143,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.48550634435163087,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q06",
+          "question": "空间里的只读成员能修改任务吗？",
+          "gold_file": "产品使用说明.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.0,
+          "sources": [
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 10.412483492695074,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": true
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 5.291310939814114,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 3.6330704191877623,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 1.248542445209953,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q07",
+          "question": "一个项目的自定义标签数量上限是多少？",
+          "gold_file": "产品使用说明.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.016,
+          "sources": [
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 17.533977595993903,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": true
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 4.963186171701685,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 3.909128794457274,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 2.2058067451642804,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q08",
+          "question": "上传任务附件有什么大小和数量限制？",
+          "gold_file": "产品使用说明.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.031,
+          "sources": [
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 9.86551467102459,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": true
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 6.04010303528229,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 4.588182846291522,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 1.9099268458429994,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q09",
+          "question": "导出的任务表会包含评论吗？",
+          "gold_file": "产品使用说明.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.0,
+          "sources": [
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 14.918650407111212,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": true
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 5.17639006601104,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 3.000427754827924,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 1.345489281277584,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q10",
+          "question": "任务删除了还能恢复多久？",
+          "gold_file": "产品使用说明.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.047,
+          "sources": [
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 9.512852696897255,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": true
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 3.725490976682448,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 2.8716766417124453,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 1.8141436396074198,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q11",
+          "question": "很多人都无法登录时要多久首次回应？",
+          "gold_file": "服务处理指南.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.031,
+          "sources": [
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 13.00214593051718,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": true
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 5.002203779394934,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 3.5268815994901384,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 2.882922516350957,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q12",
+          "question": "单个任务显示异常属于什么级别？",
+          "gold_file": "服务处理指南.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.031,
+          "sources": [
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 18.428738824125382,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": true
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 7.7055290609592815,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 1.858880961888186,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 1.396149732071473,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q13",
+          "question": "服务工单必须填写哪些信息？",
+          "gold_file": "服务处理指南.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.032,
+          "sources": [
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 15.586312868946168,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": true
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 4.089752721490774,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 3.187622358595598,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.9454099780855941,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q14",
+          "question": "什么情况下可以把工单标记为已解决？",
+          "gold_file": "服务处理指南.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.015,
+          "sources": [
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 13.123995299117096,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": true
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 5.6341804394469985,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 4.344045669615523,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 2.58899611208788,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q15",
+          "question": "排查问题时可以向用户索要验证码吗？",
+          "gold_file": "服务处理指南.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.032,
+          "sources": [
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 14.449306574456738,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": true
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 9.118179671563446,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 8.036703104077686,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 1.4897105248021791,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q16",
+          "question": "正式文档必须写哪些信息？",
+          "gold_file": "知识库维护规范.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.031,
+          "sources": [
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 12.86710151578404,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": true
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 6.559020399412117,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 2.4588163827672362,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.14790426518093283,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q17",
+          "question": "引用外部网站时要额外记录什么？",
+          "gold_file": "知识库维护规范.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.015,
+          "sources": [
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 16.134872372619125,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": true
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 2.104014231327401,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 1.996088154817136,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 1.0305609529920006,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q18",
+          "question": "谁检查知识库的失效链接，多久一次？",
+          "gold_file": "知识库维护规范.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.032,
+          "sources": [
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 17.37199504042891,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": true
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 7.474526044933933,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 3.992263626310468,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 1.4732763096379078,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q19",
+          "question": "用户说回答没有依据时要保存哪些东西？",
+          "gold_file": "知识库维护规范.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.015,
+          "sources": [
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 14.170001017481074,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": true
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 3.759441860415535,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 3.117607800812843,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 2.5081992097067003,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q20",
+          "question": "检索配置修改后应该怎样验证？",
+          "gold_file": "知识库维护规范.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.047,
+          "sources": [
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 10.716701677026467,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": true
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 5.974267197443573,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 2.675860403584108,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 1.74668189612178,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "n01",
+          "question": "火星探测器的燃料配比是多少？",
+          "gold_file": null,
+          "first_relevant_rank": null,
+          "no_result": false,
+          "elapsed_seconds": 0.0,
+          "sources": [
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 3.9699349212158737,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 3.324158380057829,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 1.629859513979729,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.6259132262597878,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "n02",
+          "question": "海豚的声呐频率是多少赫兹？",
+          "gold_file": null,
+          "first_relevant_rank": null,
+          "no_result": false,
+          "elapsed_seconds": 0.047,
+          "sources": [
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 1.4546051519830783,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 1.2622166369182684,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.8931487929252266,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.2703356603154732,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "n03",
+          "question": "珠穆朗玛峰岩石的矿物组成是什么？",
+          "gold_file": null,
+          "first_relevant_rank": null,
+          "no_result": false,
+          "elapsed_seconds": 0.016,
+          "sources": [
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 1.7107848058100128,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 1.2455937527767371,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.7898795512412511,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.2681270900922468,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "n04",
+          "question": "如何合成紫色有机荧光染料？",
+          "gold_file": null,
+          "first_relevant_rank": null,
+          "no_result": false,
+          "elapsed_seconds": 0.031,
+          "sources": [
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 2.109335935672625,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 1.4348713834236129,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 1.034567321728393,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.844967250374143,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            }
+          ]
+        }
+      ]
+    },
+    "vector": {
+      "recall_at_1": 0.95,
+      "recall_at_3": 1.0,
+      "mrr_at_5": 0.975,
+      "negative_no_result": 0,
+      "negative_total": 4,
+      "cases": [
+        {
+          "id": "q01",
+          "question": "团队每周开会是在周几几点？",
+          "gold_file": "团队协作手册.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.078,
+          "sources": [
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.649580162561192,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": true
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.4944608481704559,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.4698534077124945,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.43206189118482946,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q02",
+          "question": "工作被卡住后多久需要通知协调人？",
+          "gold_file": "团队协作手册.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.047,
+          "sources": [
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.6349361593919695,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": true
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.5836938755946404,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.5088846348011155,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.5032644729909389,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q03",
+          "question": "跨小组协作在讨论前要做哪些准备？",
+          "gold_file": "团队协作手册.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.141,
+          "sources": [
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.585980803957609,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": true
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.4726439929560502,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.43625706807941794,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.4306447736025926,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q04",
+          "question": "谁负责定期复核产品手册？",
+          "gold_file": "团队协作手册.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.093,
+          "sources": [
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.5760719813712007,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": true
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.5732047887889703,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.4660431945192367,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.4601394559267965,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q05",
+          "question": "测试设备最多能借几天？",
+          "gold_file": "团队协作手册.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.11,
+          "sources": [
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.5781718613863149,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": true
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.5016203379998417,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.5013283450503087,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.4521745663395005,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q06",
+          "question": "空间里的只读成员能修改任务吗？",
+          "gold_file": "产品使用说明.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.062,
+          "sources": [
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.5959238011142266,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": true
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.5300335962023824,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.46908420523366795,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.460580474484226,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q07",
+          "question": "一个项目的自定义标签数量上限是多少？",
+          "gold_file": "产品使用说明.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.11,
+          "sources": [
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.6004082465412448,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": true
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.4719493606398868,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.4581822189644205,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.4356261988046512,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q08",
+          "question": "上传任务附件有什么大小和数量限制？",
+          "gold_file": "产品使用说明.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.109,
+          "sources": [
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.6626713146952579,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": true
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.5547073665395851,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.5036681632468567,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.4988889721829277,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q09",
+          "question": "导出的任务表会包含评论吗？",
+          "gold_file": "产品使用说明.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.062,
+          "sources": [
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.6127630248167226,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": true
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.5448591213686806,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.5380553693676172,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.5156067305709572,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q10",
+          "question": "任务删除了还能恢复多久？",
+          "gold_file": "产品使用说明.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.079,
+          "sources": [
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.6151136605593223,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": true
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.584496855403714,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.5402545777586317,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.4908397382005109,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q11",
+          "question": "很多人都无法登录时要多久首次回应？",
+          "gold_file": "服务处理指南.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.046,
+          "sources": [
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.6553305642639617,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": true
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.4884493148403487,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.4592523713070096,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.4588946777442669,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q12",
+          "question": "单个任务显示异常属于什么级别？",
+          "gold_file": "服务处理指南.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.094,
+          "sources": [
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.5731314495515079,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": true
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.5323601069368257,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.44812515862313457,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.43623994068299093,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q13",
+          "question": "服务工单必须填写哪些信息？",
+          "gold_file": "服务处理指南.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.063,
+          "sources": [
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.5982954967459794,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": true
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.48910215193462386,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.4875485816091852,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.4775111720009182,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q14",
+          "question": "什么情况下可以把工单标记为已解决？",
+          "gold_file": "服务处理指南.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.109,
+          "sources": [
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.5851084491858988,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": true
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.4944525702989624,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.4940521704337961,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.47290685808919,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q15",
+          "question": "排查问题时可以向用户索要验证码吗？",
+          "gold_file": "服务处理指南.md",
+          "first_relevant_rank": 2,
+          "no_result": false,
+          "elapsed_seconds": 0.094,
+          "sources": [
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.5675178537611327,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.5606379754791924,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": true
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.49079687362340635,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.4758929862351675,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q16",
+          "question": "正式文档必须写哪些信息？",
+          "gold_file": "知识库维护规范.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.14,
+          "sources": [
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.619939550033582,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": true
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.5212688412123839,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.5179353750796739,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.5028337956578854,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q17",
+          "question": "引用外部网站时要额外记录什么？",
+          "gold_file": "知识库维护规范.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.079,
+          "sources": [
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.5616082203005804,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": true
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.4888046185123437,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.47971949284182275,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.47309798023443644,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q18",
+          "question": "谁检查知识库的失效链接，多久一次？",
+          "gold_file": "知识库维护规范.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.046,
+          "sources": [
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.6406603076127804,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": true
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.5578563251720076,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.4894632017806452,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.4584487899135928,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q19",
+          "question": "用户说回答没有依据时要保存哪些东西？",
+          "gold_file": "知识库维护规范.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.079,
+          "sources": [
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.5949307002217702,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": true
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.48094630352968254,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.47279230444562975,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.47246059112766875,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q20",
+          "question": "检索配置修改后应该怎样验证？",
+          "gold_file": "知识库维护规范.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.125,
+          "sources": [
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.5789067819671937,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": true
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.48602461937187735,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.4387556585007543,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.4239958393023825,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "n01",
+          "question": "火星探测器的燃料配比是多少？",
+          "gold_file": null,
+          "first_relevant_rank": null,
+          "no_result": false,
+          "elapsed_seconds": 0.078,
+          "sources": [
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.3338875125722453,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.3335562163625449,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.33168843056366526,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.315161670211647,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "n02",
+          "question": "海豚的声呐频率是多少赫兹？",
+          "gold_file": null,
+          "first_relevant_rank": null,
+          "no_result": false,
+          "elapsed_seconds": 0.078,
+          "sources": [
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.3015894225193195,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.28282988604445625,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.27272411148635034,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.26028768156700244,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "n03",
+          "question": "珠穆朗玛峰岩石的矿物组成是什么？",
+          "gold_file": null,
+          "first_relevant_rank": null,
+          "no_result": false,
+          "elapsed_seconds": 0.047,
+          "sources": [
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.2604273200164106,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.2554318659042418,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.23487305267367745,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.2153642826775419,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "n04",
+          "question": "如何合成紫色有机荧光染料？",
+          "gold_file": null,
+          "first_relevant_rank": null,
+          "no_result": false,
+          "elapsed_seconds": 0.062,
+          "sources": [
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.27750219444653723,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.26175013399828007,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.24750380944417225,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.22183539635862012,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            }
+          ]
+        }
+      ]
+    },
+    "hybrid": {
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "mrr_at_5": 1.0,
+      "negative_no_result": 0,
+      "negative_total": 4,
+      "cases": [
+        {
+          "id": "q01",
+          "question": "团队每周开会是在周几几点？",
+          "gold_file": "团队协作手册.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.063,
+          "sources": [
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03278688524590164,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": true
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03225806451612903,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.031746031746031744,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03125,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q02",
+          "question": "工作被卡住后多久需要通知协调人？",
+          "gold_file": "团队协作手册.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.062,
+          "sources": [
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03278688524590164,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": true
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03200204813108039,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.031754032258064516,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03149801587301587,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q03",
+          "question": "跨小组协作在讨论前要做哪些准备？",
+          "gold_file": "团队协作手册.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.078,
+          "sources": [
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03278688524590164,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": true
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03225806451612903,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03149801587301587,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03149801587301587,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q04",
+          "question": "谁负责定期复核产品手册？",
+          "gold_file": "团队协作手册.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.063,
+          "sources": [
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03278688524590164,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": true
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03225806451612903,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.031746031746031744,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03125,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q05",
+          "question": "测试设备最多能借几天？",
+          "gold_file": "团队协作手册.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.14,
+          "sources": [
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03278688524590164,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": true
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03225806451612903,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.031746031746031744,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03125,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q06",
+          "question": "空间里的只读成员能修改任务吗？",
+          "gold_file": "产品使用说明.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.063,
+          "sources": [
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03278688524590164,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": true
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03225806451612903,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.031746031746031744,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03125,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q07",
+          "question": "一个项目的自定义标签数量上限是多少？",
+          "gold_file": "产品使用说明.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.031,
+          "sources": [
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03278688524590164,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": true
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03200204813108039,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.031754032258064516,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03149801587301587,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q08",
+          "question": "上传任务附件有什么大小和数量限制？",
+          "gold_file": "产品使用说明.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.078,
+          "sources": [
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03278688524590164,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": true
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03200204813108039,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.031754032258064516,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03149801587301587,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q09",
+          "question": "导出的任务表会包含评论吗？",
+          "gold_file": "产品使用说明.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.094,
+          "sources": [
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03278688524590164,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": true
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.031754032258064516,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.031754032258064516,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.031746031746031744,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q10",
+          "question": "任务删除了还能恢复多久？",
+          "gold_file": "产品使用说明.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.063,
+          "sources": [
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03278688524590164,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": true
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.031754032258064516,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.031754032258064516,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.031746031746031744,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q11",
+          "question": "很多人都无法登录时要多久首次回应？",
+          "gold_file": "服务处理指南.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.093,
+          "sources": [
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03278688524590164,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": true
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03225806451612903,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03149801587301587,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03149801587301587,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q12",
+          "question": "单个任务显示异常属于什么级别？",
+          "gold_file": "服务处理指南.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.063,
+          "sources": [
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03278688524590164,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": true
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03225806451612903,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03149801587301587,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03149801587301587,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q13",
+          "question": "服务工单必须填写哪些信息？",
+          "gold_file": "服务处理指南.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.047,
+          "sources": [
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03278688524590164,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": true
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03200204813108039,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.031754032258064516,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03149801587301587,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q14",
+          "question": "什么情况下可以把工单标记为已解决？",
+          "gold_file": "服务处理指南.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.109,
+          "sources": [
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03278688524590164,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": true
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03225806451612903,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.031746031746031744,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03125,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q15",
+          "question": "排查问题时可以向用户索要验证码吗？",
+          "gold_file": "服务处理指南.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.078,
+          "sources": [
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03252247488101534,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": true
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.032266458495966696,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.031754032258064516,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03149801587301587,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q16",
+          "question": "正式文档必须写哪些信息？",
+          "gold_file": "知识库维护规范.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.047,
+          "sources": [
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03278688524590164,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": true
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03200204813108039,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.031754032258064516,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03149801587301587,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q17",
+          "question": "引用外部网站时要额外记录什么？",
+          "gold_file": "知识库维护规范.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.047,
+          "sources": [
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03278688524590164,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": true
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.031754032258064516,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.031754032258064516,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.031746031746031744,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q18",
+          "question": "谁检查知识库的失效链接，多久一次？",
+          "gold_file": "知识库维护规范.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.047,
+          "sources": [
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03278688524590164,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": true
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03225806451612903,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03149801587301587,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03149801587301587,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q19",
+          "question": "用户说回答没有依据时要保存哪些东西？",
+          "gold_file": "知识库维护规范.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.047,
+          "sources": [
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03278688524590164,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": true
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03200204813108039,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03200204813108039,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03125,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "q20",
+          "question": "检索配置修改后应该怎样验证？",
+          "gold_file": "知识库维护规范.md",
+          "first_relevant_rank": 1,
+          "no_result": false,
+          "elapsed_seconds": 0.047,
+          "sources": [
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03278688524590164,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": true
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03200204813108039,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03200204813108039,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03125,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "n01",
+          "question": "火星探测器的燃料配比是多少？",
+          "gold_file": null,
+          "first_relevant_rank": null,
+          "no_result": false,
+          "elapsed_seconds": 0.062,
+          "sources": [
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03278688524590164,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03200204813108039,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03200204813108039,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03125,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "n02",
+          "question": "海豚的声呐频率是多少赫兹？",
+          "gold_file": null,
+          "first_relevant_rank": null,
+          "no_result": false,
+          "elapsed_seconds": 0.078,
+          "sources": [
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03252247488101534,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.032266458495966696,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03200204813108039,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03125,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "n03",
+          "question": "珠穆朗玛峰岩石的矿物组成是什么？",
+          "gold_file": null,
+          "first_relevant_rank": null,
+          "no_result": false,
+          "elapsed_seconds": 0.11,
+          "sources": [
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.032266458495966696,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            },
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.032266458495966696,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.031754032258064516,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.031754032258064516,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            }
+          ]
+        },
+        {
+          "id": "n04",
+          "question": "如何合成紫色有机荧光染料？",
+          "gold_file": null,
+          "first_relevant_rank": null,
+          "no_result": false,
+          "elapsed_seconds": 0.14,
+          "sources": [
+            {
+              "id": "9d54c9db-6085-41fb-a960-370944aa0e67:p1:l1:c1",
+              "documentId": "9d54c9db-6085-41fb-a960-370944aa0e67",
+              "filename": "产品使用说明.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03278688524590164,
+              "text_sha256": "fa6f557030258e789405c932f591e60076b47af3c7be82f48cab5539adfe811f",
+              "gold_matched": false
+            },
+            {
+              "id": "3820344b-fe48-45cb-a31f-ec6b52050c83:p1:l1:c1",
+              "documentId": "3820344b-fe48-45cb-a31f-ec6b52050c83",
+              "filename": "团队协作手册.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03225806451612903,
+              "text_sha256": "14bdd303d1701622f5bfcef52a9b2c06b866c168a3c37d0d9f8a2d881aacfd6e",
+              "gold_matched": false
+            },
+            {
+              "id": "57b90080-6a99-4a3c-9966-ba3b2731e760:p1:l1:c1",
+              "documentId": "57b90080-6a99-4a3c-9966-ba3b2731e760",
+              "filename": "服务处理指南.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03149801587301587,
+              "text_sha256": "62cffe15aa199a55b335058a01015c0078040cb9fb25d3eccc206bd94f5458d4",
+              "gold_matched": false
+            },
+            {
+              "id": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb:p1:l1:c1",
+              "documentId": "fa0f0cdb-eb74-4ba0-86f4-4111910750cb",
+              "filename": "知识库维护规范.md",
+              "page": 1,
+              "lineStart": 1,
+              "lineEnd": 18,
+              "score": 0.03149801587301587,
+              "text_sha256": "7c7201fa15ad5246b70a1ab956a6bd15ce7c37d989d6494e87cdd50ddb0d452c",
+              "gold_matched": false
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "model_configuration": {
+    "embeddingConfigured": true,
+    "chatConfigured": true
+  },
+  "provenance": {
+    "method": "compacted_existing_observed_http_report",
+    "raw_report_sha256": "6b89d9b11a42044398764f0e11aee8df08d316dd7f2005f6011d658560a568af",
+    "source_text_storage": "Repeated UTF-8 source text replaced by SHA-256 and exact gold-substring match; all observed ranks, scores, timings and failures retained. No network rerun or metric adjustment."
+  }
+}
